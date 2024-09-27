@@ -1,0 +1,115 @@
+@import url('/css/fonts.css');
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --green: hsl(75, 94%, 57%);
+    --white: hsl(0, 0%, 100%);
+    --grey-700: hsl(0, 0%, 20%);
+    --grey-800: hsl(0, 0%, 12%);
+    --grey-900: hsl(0, 0%, 8%);
+
+    /* #002E3D */
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li,
+ul {
+    list-style: none;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--grey-900);
+    font-family: 'Inter', sans-serif;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    place-items: center;
+}
+
+.container {
+    width: 90%;
+    min-width: 17.5rem;
+    max-width: 21.875rem;
+    background-color: var(--grey-800);
+    padding: 1.5rem;
+    border-radius: 0.9375rem;
+    text-align: center;
+    color: var(--white);
+}
+
+.user-info__profile-picture {
+    margin: 0 auto 1rem auto;
+    object-fit: contain;
+    border-radius: 10rem;
+    width: 6.25rem;
+}
+
+.user-info__name {
+    font-weight: 600;
+}
+
+.user-info__location {
+    display: inline-block;
+    margin: .625rem 0 2.1875rem 0;
+    font-size: 0.875rem;
+    color: var(--green);
+    font-weight: 600;
+}
+
+.user-info__biography {
+    font-size: 15px;
+}
+
+.user-social {
+    margin-top: 1.5rem;
+
+    & .user-social__item {
+        background-color: var(--grey-700);
+        padding: .9375rem 0;
+        border-radius: .5rem;
+        transition: all ease-in .3s;
+    }
+}
+
+.user-social_link {
+    font-weight: 700;
+    outline: none;
+}
+
+.user-social__item:focus-within {
+    background-color: var(--green);
+    color: var(--grey-900);
+}
+
+.user-social__item:hover {
+    cursor: pointer;
+    background-color: var(--green);
+    color: var(--grey-900);
+}
+
+.user-social__item+.user-social__item {
+    margin-top: 1rem;
+}
+
+.attribution {
+    text-align: center;
+    font-size: 8px;
+    color: var(--green);
+    width: 60%;
+}
